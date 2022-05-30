@@ -6,15 +6,14 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: '@mrwconsulting/iac-delivery',
   repositoryUrl: 'https://github.com/mrwconsulting/iac-delivery.git',
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  packageName: '@mrwconsulting/iac-delivery',
+  description: 'Continuous Integration / Continuous Delivery for CDK Applications',
   python: {
     distName: 'iac-delivery',
     module: 'iac_delivery',
   },
+  // deps: [],                /* Runtime dependencies of this module. */
+  // devDeps: [],             /* Build dependencies for this module. */
 });
 project.gitignore.addPatterns('.venv/');
 project.synth();
